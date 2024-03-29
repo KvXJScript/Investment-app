@@ -1,0 +1,11 @@
+export * as CalendarIcon from "./calendar.svg";
+export * as CalendarBasicIcon from "./calendar-basic.svg";
+export * as ChatIcon from "./chat.svg";
+export * as FacebookIcon from "./facebook.png";
+export * as HomeIcon from "./home.svg";
+export * as InstagramIcon from "./instagram.png";
+export * as LogoIcon from "./logo.png";
+export * as PawIcon from "./paw.svg";
+export * as TicketIcon from "./ticket.png";
+export * as TimeIcon from "./time.svg";
+export * as TwitterIcon from "./twitter.png";

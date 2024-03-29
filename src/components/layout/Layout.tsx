@@ -1,14 +1,12 @@
 import { ReactNode } from 'react';
-import Navbar from '../Navbar/Navbar';
-import Header from '../Header/Header';
 import styles from './Layout.module.scss';
-import Footer from '../Footer/Footer';
+import {Footer, Navbar, Header} from "../index";
 
 interface Props {
   children?: ReactNode;
 }
 
-const Layout = ({ children, ...props }: Props): JSX.Element => {
+export const Layout = ({ children, ...props }: Props) => {
   return (
     <div {...props}>
       <div className={styles.container}>
@@ -24,5 +22,3 @@ const Layout = ({ children, ...props }: Props): JSX.Element => {
     </div>
   );
 };
-
-export default Layout;

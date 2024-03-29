@@ -1,7 +1,7 @@
 import styles from './ActionButton.module.scss';
 import { FaPlus } from 'react-icons/fa';
 import { CSSProperties } from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 
 interface Props {
   style?: CSSProperties;
@@ -9,10 +9,10 @@ interface Props {
   onClick: () => void;
 }
 
-const ActionButton = ({ style, type, ...rest }: Props): JSX.Element => {
+export const ActionButton = ({ style, type, ...rest }: Props): JSX.Element => {
   return (
     <button
-      className={classNames(
+      className={clsx(
         styles.button,
         type === 'circle' ? styles.circle : styles.rectangle
       )}
@@ -23,5 +23,3 @@ const ActionButton = ({ style, type, ...rest }: Props): JSX.Element => {
     </button>
   );
 };
-
-export default ActionButton;

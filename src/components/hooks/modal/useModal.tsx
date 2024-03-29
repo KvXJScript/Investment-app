@@ -1,7 +1,4 @@
-'use client';
-
-import React, { MouseEventHandler, useEffect, useRef, useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import {MouseEventHandler, ReactNode, useEffect, useState} from 'react';
 import styles from './Modal.module.scss';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -9,10 +6,11 @@ interface ModalButtonArgs {
   onClick: () => void;
   label?: string;
   icon?: string;
+  showOnBottom?: () => void;
 }
 
 interface Args {
-  children: any;
+  children: ReactNode;
   size?: string;
   title?: string;
   buttons?: {
@@ -79,7 +77,7 @@ export default function Modal({ children, title, buttons, isOpen }: Args) {
         <AnimatePresence mode="wait">
           <div>
             <h2>{title}</h2>
-            <span className={styles.close} onClick={buttons.close?.onClick}>
+            <span className={styles.close} onClick={buttons?.close?.onClick}>
               &times;
             </span>
 

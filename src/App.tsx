@@ -1,6 +1,6 @@
 import "./App.css";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import Layout from "./layout/Layout.tsx";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Layout } from "src/components/layout";
 
 function Home() {
   return <h1>Home Page</h1>;
@@ -19,9 +19,11 @@ function App() {
     <Router>
       <Layout>
         Testing
-        <Route path="/" Component={Home} />
-        <Route path="/about" Component={About} />
-        <Route path="/contact" Component={Contact} />
+        <Routes>
+          <Route path="/" Component={Home} />
+          <Route path="/about" Component={About} />
+          <Route path="/contact" Component={Contact} />
+        </Routes>
       </Layout>
     </Router>
   );

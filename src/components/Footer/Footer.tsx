@@ -1,17 +1,15 @@
 import styles from "./Footer.module.scss";
 import { FC } from "react";
-import Icon from "@/app/assets/icons/logo.png";
-import Facebook from "@/app/assets/icons/facebook.png";
-import Instagram from "@/app/assets/icons/instagram.png";
-import Twitter from "@/app/assets/icons/twitter.png";
+import Facebook from "src/assets/icons/facebook.png";
+import Instagram from "src/assets/icons/instagram.png";
+import Twitter from "src/assets/icons/twitter.png";
 
 export const Footer: FC = () => {
   return (
     <footer className={styles.footer}>
       <section className={styles.row}>
         <div style={{ alignSelf: "center" }}>
-          <Icon />
-          <b>Zoo Admin Portal</b>
+          <b>Investment app</b>
         </div>
         <div>
           <h5>Zoo admin portal main app for management solution in region</h5>
