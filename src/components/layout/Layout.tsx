@@ -1,6 +1,5 @@
-import { ReactNode } from 'react';
-import styles from './Layout.module.scss';
-import {Footer, Navbar, Header} from "../index";
+import { ReactNode } from "react";
+import { Footer, Navbar, Header } from "../index";
 
 interface Props {
   children?: ReactNode;
@@ -9,14 +8,12 @@ interface Props {
 export const Layout = ({ children, ...props }: Props) => {
   return (
     <div {...props}>
-      <div className={styles.container}>
-        <Navbar />
-        <div className={styles.main}>
+      <div className="flex">
+        {/*<Navbar />*/}
+        <div className="flex flex-1 flex-col min-h-screen">
           <Header />
-          <main>
-            {children}
-            <Footer />
-          </main>
+          <main className="m-12">{children}</main>
+          <Footer />
         </div>
       </div>
     </div>

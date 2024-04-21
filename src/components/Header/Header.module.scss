@@ -1,11 +1,9 @@
 .container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  padding: 2rem 0;
-}
-.container > div {
-  margin: 0 2rem;
+  padding: 1rem 3rem;
+  background: $header-background;
 }
 .bellContainer {
   position: relative;
@@ -27,27 +25,22 @@
   align-items: center;
   justify-content: center;
 }
-.userContainer {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
 
 .userLogo {
   font-size: 2.5rem;
-  color: #ffad0d;
-  margin-right: 1rem;
+  color: $primary-color;
 }
 
 .userName {
+  padding-left: 1rem;
   font-weight: 500;
   cursor: pointer;
 }
 .userModal {
   position: absolute;
-  top: 50px;
-  background-color: $fourth-color;
-  width: 100%;
+  top: 60px;
+  background-color: $white-color;
+  width: 10%;
   border-radius: 4px;
 }
 .useModalElement {
@@ -55,24 +48,25 @@
   align-items: center;
   padding: 0;
   margin: 0;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.1s ease-in-out;
   &:hover {
-    background-color: $tertiary-color;
+    background-color: $primary-color;
+    border-radius: 4px;
   }
   &:hover svg,
   &:hover p {
-    color: $white-color;
+    color: $secondary-color;
   }
 
   svg {
     width: 18px;
     height: 18px;
     margin: 0 1rem 0 0.5rem;
-    color: $black-color;
+    color: $secondary-color;
   }
 
   p {
-    color: $black-color;
+    color: $secondary-color;
     margin: 0.6rem 0;
   }
 }

@@ -18,7 +18,6 @@ function App() {
   return (
     <Router>
       <Layout>
-        Testing
         <Routes>
           <Route path="/" Component={Home} />
           <Route path="/about" Component={About} />
